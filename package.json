@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "mineflayer": "^4.8.1",
+    "mineflayer-chat": "^0.0.1",
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "build": "npx tsc",
+    "dev": "npm-run-all -p build start"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "ts-node-dev": "^2.0.0"
+  }
+}
