@@ -1,5 +1,5 @@
 "use strict";
-// auto generate javascript file with "npx tsc"
+// auto generated javascript file with "npx tsc"
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -14,5 +14,15 @@ function sendChatMessage(message) {
     bot.chat(message);
 }
 bot.once('spawn', () => {
-    sendChatMessage('/tellraw @a "a Bot has joined the server"');
+    sendChatMessage('hi');
+});
+bot.on("chat", (player, message) => {
+    if (player == bot.username) {
+        return;
+    }
+    switch (message) {
+        case 'help':
+            sendChatMessage("What can i do for you?");
+            break;
+    }
 });

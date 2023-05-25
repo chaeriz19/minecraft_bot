@@ -1,4 +1,4 @@
-// auto generate javascript file with "npx tsc"
+// auto generated javascript file with "npx tsc"
 
 import mineflayer, { Bot } from 'mineflayer';
 import mineflayerChat from 'mineflayer-chat';
@@ -13,5 +13,14 @@ function sendChatMessage(message: string) {
     bot.chat(message);
 }
 bot.once('spawn', () => {
-    sendChatMessage('/tellraw @a "a Bot has joined the server"');
+    sendChatMessage('hi');
+});
+
+bot.on("chat", (player, message) => {
+    if (player == bot.username) { return;}
+    switch (message) {
+        case 'help':
+            sendChatMessage("What can i do for you?");
+            break;
+    }
 });
