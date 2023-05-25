@@ -2,6 +2,7 @@
   "dependencies": {
     "mineflayer": "^4.8.1",
     "mineflayer-chat": "^0.0.1",
+    "openai": "^3.2.1",
     "typescript": "^5.0.4"
   },
   "scripts": {

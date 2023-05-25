@@ -20,6 +20,7 @@ bot.on("chat", (player, message) => {
     if (player == bot.username) {
         return;
     }
+    console.log(bot + player);
     switch (message) {
         case 'help':
             sendChatMessage("What can i do for you?");
